@@ -11,18 +11,24 @@ from operator import itemgetter
 from datetime import datetime
 
 
-filepath="/root/Documents/6720/clean_flight/2011-12-01-data.txt"
+filepath="clean_flight/2011-12-01-data.txt"
 infile = open(filepath,"r")
 #dataset = islice(infile, 21)
 
+def filter_input(data):
+    return len(data.strip())
+
 #for aline in dataset:
 for aline in infile:
-    data = aline.split()
+    data = filter(filter_input, aline.split('\t'))
     if data[0] in ("airtravelcenter","myrateplan", "helloflight"):
     # ("flytecomm"): this pattern has some unmatch date format, parsing is interuppted
+        print data
+        continue
         datalist = list(itemgetter(0,1,2,3,4,6,7,8)(data))
         datalist[3:5] = [''.join(datalist[3:5])]
         datalist[5:] = [''.join(datalist[5:])]
+        print 'datalist:', datalist
         dataArray = np.array(datalist)
         in_date_start = datetime.strptime(dataArray[2],"%m/%d/%y")
         in_date_end = datetime.strptime(dataArray[4],"%m/%d/%y")
