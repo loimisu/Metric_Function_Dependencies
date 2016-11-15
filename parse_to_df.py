@@ -19,13 +19,7 @@ if __name__ == '__main__':
     time3 = []
     time4 = []
 
-    patRemove = re.compile(r'''
-        [ -]*(Contact|Not).*|       # remove string with ' - contact%' or 'not%' on item
-        [ ]+(Delay|(On Time)).*$|    # remove string with '%delay%' or '%on time%' on item
-        [ ]+([(].*[)]).*$|           # remove string with '(%%)' on item
-        ^(Not).*|                   # remove items for string start with 'Not %'
-        .*(Term).*|                 # remove string with'%Term%' on item and items for string start with 'Term%'
-        ''', re.VERBOSE)
+    patRemove = re.compile(r'[ -]*(Contact|Not|Delay|On Time|&nbsp).*|[ ]*\(.*\).*$|^.*Term.*$')
 
     for aline in infile:
         data = filter(filter_input, aline.split('\t')) # remove '\t' from the beginning and end of the string
