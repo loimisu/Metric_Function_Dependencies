@@ -5,7 +5,7 @@ import re
 
 
 if __name__ == '__main__':
-    filepath="/root/Documents/6720/clean_flight/2011-12-01-data.txt"
+    filepath="clean_flight/2011-12-01-data.txt"
     infile = open(filepath,"r")
     
     def filter_input(data):
@@ -18,16 +18,20 @@ if __name__ == '__main__':
     time2 = []
     time3 = []
     time4 = []
+
+    patRemove = re.compile(r'''
+        [ -]*(Contact|Not).*|       # remove string with ' - contact%' or 'not%' on item
+        [ ]+(Delay|(On Time)).*$|    # remove string with '%delay%' or '%on time%' on item
+        [ ]+([(].*[)]).*$|           # remove string with '(%%)' on item
+        ^(Not).*|                   # remove items for string start with 'Not %'
+        .*(Term).*|                 # remove string with'%Term%' on item and items for string start with 'Term%'
+        ''', re.VERBOSE)
+
     for aline in infile:
         data = filter(filter_input, aline.split('\t')) # remove '\t' from the beginning and end of the string
         #if data[0] in ("aa", "ua"):
-        data = map(lambda item: re.sub(r'[ -]+(Contact|Not).*','', item, re.IGNORECASE), data) # remove string with ' - contact%' or 'not%' on item
-        data = map(lambda item: re.sub(r' +(Delay|(On Time)).*$','', item, re.IGNORECASE), data) # remove string with '%delay%' or '%on time%' on item
-        data = map(lambda item: re.sub(r' +([(].*[)]).*$','', item, re.IGNORECASE), data) # remove string with '(%%)' on item
-        data = map(lambda item: re.sub(r'^(Not).*','', item, re.IGNORECASE), data) # remove items for string start with 'Not %' 
-        data = map(lambda item: re.sub(r'.*(Term).*','', item, re.IGNORECASE), data) 
-        # remove string with'%Term%' on item and items for string start with 'Term%'
-            
+        data = map(lambda item: patRemove.sub('', item, re.IGNORECASE), data) 
+        
         datalist = filter(lambda item: len(item) > 8, data[1:])
         datalist.insert(0,data[0])    
         datalist = map(lambda item: re.sub(r'([,]|( - )|[*])','', item), datalist)
@@ -36,6 +40,7 @@ if __name__ == '__main__':
     #            numlines_array.append(numlines)
     #print numlines_array        
         
+        print datalist 
         source_nm.append(datalist[0])
         flight_nm.append(datalist[1])
         time1.append(datalist[2])
@@ -55,14 +60,17 @@ if __name__ == '__main__':
                 time4.append(datalist[5])
             except IndexError:
                 time4 = ['null']
-        data = {'source_nm': source_nm,
-                'fligh_nm': flight_nm,
-                'time1': time1,
-                'time2': time2,
-                'time3': time3,
-                'time4': time4}
-        df = pd.dataframe(data)
-        print df
+    data = {
+        'source_nm': source_nm,
+        'fligh_nm': flight_nm,
+        'time1': time1,
+        'time2': time2,
+        'time3': time3,
+        'time4': time4
+    }
+    # print data
+    # df = pd.dataframe(data)
+    # print df
     
             
 
