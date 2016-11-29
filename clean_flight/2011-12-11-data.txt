@@ -6619,7 +6619,7 @@ boston	CO-1173-IAH-DEN	8:45 AM, Dec 11	8:56 AM, Dec 11		10:18 AM, Dec 11	10:01 A
 travelocity	CO-1173-IAH-DEN	Dec 11 - 8:45am	Dec 11 - 8:45am	C-37	Dec 11 - 10:18am	Dec 11 - 10:11am	B22
 orbitz	CO-1173-IAH-DEN	8:45aDec 11	8:45aDec 11	 37	10:18aDec 11	10:11aDec 11	 B22
 weather	CO-1173-IAH-DEN	2011-12-11 08:45 AM			2011-12-11 10:18 AM		
-den	CO-1173-IAH-DEN				2011-12-11 10:18 AM		 
+den	CO-1173-IAH-DEN				2011-12-11 10:18 AM		\A0
 usatoday	CO-1173-IAH-DEN	2011-12-11 8:45 AM	2011-12-11 8:45 AM		2011-12-11 10:18 AM	2011-12-11 9:59 AM (runway)	
 mytripandmore	CO-1173-IAH-DEN	8:45aDec 11	8:45aDec 11	 37	10:18aDec 11	10:11aDec 11	 B22
 ua	UA-456-DEN-SAN	Sun, Dec 11 8:09 AM	Sun, Dec 11 8:02 AM	B39	Sun, Dec 11 9:32 AM	Sun, Dec 11 9:20 AM	13
@@ -13089,7 +13089,7 @@ allegiantair	CO-1036-IAH-DEN		2:55 PMDec 11			4:08 PMDec 11
 boston	CO-1036-IAH-DEN		2:55 PMDec 11			4:08 PMDec 11	
 orbitz	CO-1036-IAH-DEN	2:30pDec 11	2:46pDec 11	 E22	4:00pDec 11	4:08pDec 11	 B22
 weather	CO-1036-IAH-DEN	2011-12-11 02:30 PM			2011-12-11 04:00 PM		
-den	CO-1036-IAH-DEN				2011-12-11 4:00 PM		 
+den	CO-1036-IAH-DEN				2011-12-11 4:00 PM		\A0
 ifly	CO-1036-IAH-DEN	2011-12-11 2:30 PM	2011-12-11 2:46 PM		2011-12-11 4:00 PM	2011-12-11 4:08 PM	
 ua	UA-1235-IAH-DTW	Sun, Dec 11 7:10 PM	Sun, Dec 11 7:09 PM	E11	Sun, Dec 11 10:58 PM	Sun, Dec 11 10:53 PM	D-1
 flightexplorer	UA-1235-IAH-DTW		12/11/2011 7:34PM CST			12/11/2011 10:46PM EST	
@@ -14730,7 +14730,7 @@ boston	UA-1173-IAH-DEN	8:45 AM, Dec 11	8:56 AM, Dec 11		10:18 AM, Dec 11	10:01 A
 travelocity	UA-1173-IAH-DEN	Dec 11 - 8:45am	Dec 11 - Contact Airline	Not provided by airline	Dec 11 - 10:18am	Dec 11 - Contact Airline	Not provided by airline
 orbitz	UA-1173-IAH-DEN	8:45aDec 11	8:45aDec 11	 37	10:18aDec 11	10:11aDec 11	 B22
 weather	UA-1173-IAH-DEN	2011-12-11 08:45 AM	2011-12-11 08:56 AM		2011-12-11 10:18 AM	2011-12-11 09:49 AM	
-den	UA-1173-IAH-DEN				2011-12-11 10:18 AM		 
+den	UA-1173-IAH-DEN				2011-12-11 10:18 AM		\A0
 usatoday	UA-1173-IAH-DEN	2011-12-11 08:45 AM	2011-12-11 08:56 AM		2011-12-11 10:18 AM	2011-12-11 09:49 AM	
 mytripandmore	UA-1173-IAH-DEN	Dec 11 - 8:45am	Dec 11 - Contact Airline	Not provided by airline	Dec 11 - 10:18am	Dec 11 - Contact Airline	Not provided by airline
 flightarrival	UA-1173-IAH-DEN	2011-12-11 08:45 AM	2011-12-11 08:56 AM		2011-12-11 10:18 AM	2011-12-11 09:49 AM	
@@ -17512,7 +17512,7 @@ orbitz	CO-45-EWR-MIA	4:00pDec 11	4:02pDec 11	 C83	7:05pDec 11	7:00pDec 11	 G19
 ifly	CO-45-EWR-MIA	2011-12-11 4:00 PM	2011-12-11 4:02 PM		2011-12-11 7:05 PM	2011-12-11 7:00 PM	
 usatoday	CO-45-EWR-MIA	4:00 PMDec 11			7:05 PMDec 11		
 flightarrival	CO-45-EWR-MIA	4:00 PMDec 11			7:05 PMDec 11		
-aa	AA-1886-MIA-MCO	December 11, 2011               03:20 PM    	December 11, 2011               03:15 PM    	 D1	December 11, 2011               04:20 PM    	December 11, 2011               04:21 PM    	 15    
+aa	AA-1886-MIA-MCO	December 11, 2011               03:20 PM    	December 11, 2011               03:15 PM    	 D1	December 11, 2011               04:20 PM      
 flightexplorer	AA-1886-MIA-MCO		12/11/2011 3:32PM EST			12/11/2011 4:16PM EST	
 airtravelcenter	AA-1886-MIA-MCO		12/11/11 3:32 PM (-05:00)			12/11/11 4:16 PM (-05:00)	
 myrateplan	AA-1886-MIA-MCO		12/11/11 3:32 PM (-05:00)			12/11/11 4:16 PM (-05:00)	
@@ -22286,7 +22286,7 @@ allegiantair	UA-1036-IAH-DEN		2:55 PMDec 11			4:08 PMDec 11
 boston	UA-1036-IAH-DEN		2:55 PMDec 11			4:08 PMDec 11	
 orbitz	UA-1036-IAH-DEN	2:30pDec 11	2:46pDec 11	 E22	4:00pDec 11	4:08pDec 11	 B22
 weather	UA-1036-IAH-DEN	2011-12-11 02:30 PM			2011-12-11 04:00 PM		
-den	UA-1036-IAH-DEN				2011-12-11 4:00 PM		 
+den	UA-1036-IAH-DEN				2011-12-11 4:00 PM		\A0
 usatoday	UA-1036-IAH-DEN	2011-12-11 02:30 PM			2011-12-11 04:00 PM		
 mytripandmore	UA-1036-IAH-DEN	2:30pDec 11	2:46pDec 11	 E22	4:00pDec 11	4:08pDec 11	 B22
 flightwise	UA-1036-IAH-DEN	2011-12-11 02:30PM CST	2011-12-11 02:55PM CST	 E22 	2011-12-11 03:50PM MST	2011-12-11 04:02PM MST	 B22 
