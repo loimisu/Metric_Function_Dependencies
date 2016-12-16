@@ -3,11 +3,8 @@ import scipy as sp
 import scipy.stats
 from kmeansd1 import ckmeans
 
-X = [190,175,175,175,175,175,170,170,197,197,197,190,
-	 190,179,179,179,179,179,173,190,190,170,197,190,
-	 172,152,190,172,152,190,197,197,190,197,197,190,
-	 197,197,190,197,172,152,190]
 
+##########
 def mf_durations(dataset):
 	# confidence interval of Gaussian Distribution
 	def GCI_values(dataset,confidence=0.95):
@@ -34,8 +31,15 @@ def mf_durations(dataset):
 		mf_values = map(lambda item: int(item*100), mf_values)
 		return mf_values
 
-	return list(set(GCI_values(dataset)) | set(ckmeans_mf_values(dataset)))
+	####### Union Set of GCI and ckMeans.d1 #########
+	mf_durations = list(set(GCI_values(dataset)) | set(ckmeans_mf_values(dataset)))
+	return mf_durations
+	#return ckmeans_mf_values(dataset)
 
-print mf_durations(X)
+
+# X= [190,175,175,175,175,175,170,170,197,197,197,190,
+# 	 190,179,179,179,179,179,173,190,190,170,197,190,
+# 	 172,152,190,172,152,190,197,197,190,197,197,190,
+# 	 197,197,190,197,172,152,190]
 
 
